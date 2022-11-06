@@ -66,13 +66,38 @@ group by actors_full_name
 order by titles_number desc
 limit 10;
 
--- 7.
+-- 7. Ranking de los mejores musicales (según las tarifas de alquiler)
+select f.title as film, c.name as category, f.rental_rate
+from film as f
+inner join old_HDD as hdd
+on f.film_id = hdd.film_id
+inner join category as c
+on hdd.category_id = c.category_id
+where c.name = 'music'
+group by f.title
+order by rental_rate desc;
 
+-- 8. Películas con behind the scenes
+select f.title, f.special_features as sf
+from film as f
+inner join old_HDD as hdd
+on f.film_id = hdd.film_id
+where f.special_features like 'behind the scenes'
+group by f.title
 
--- 8.
+-- 9. Clasificación de películas según su tarifa de alquiler
+select f.title, f.rental_rate,
+case 
+ when f.rental_rate >= 3 then 'expensive'
+ when f.rental_rate < 3 then 'affordable'
+end as film_score
+from film as f;
 
-
--- 9.
-
-
--- 10.
+-- 10. Películas de Grace Mostel que duran más de 2 horas.
+select f.title, f.length
+from film as f
+inner join old_HDD as hdd
+on f.film_id = hdd.film_id
+inner join actor as a
+on hdd.actor_id = a.actor_id
+where a.full_name = 'Grace Mostel' and f.length > 120;
