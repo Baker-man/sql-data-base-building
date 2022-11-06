@@ -3,7 +3,7 @@
 ![cinema](https://user-images.githubusercontent.com/112175733/200187492-bac1155f-ab85-4e2f-aeb9-dda7f223aaeb.jpg)
 
 
-🎯OBJETIVOS
+🎯 OBJETIVOS
 
 1) Crear un repo nuevo con files src, img, data, Readme.md y gitignore.
 
@@ -19,7 +19,7 @@
 
 ------------------------------------------
 
-📋PASOS SEGUIDOS
+📋 PASOS SEGUIDOS
 
 1) Cargar los dataframe en Jupyter y limpiarlos con Pandas.
    
@@ -80,4 +80,19 @@
  Durante la carga de datos se descubrieron algunos pequeños conflictos, como que el nombre de alguna columna se había generado distinto o la pérdida de la foreign key inventory de rental. Ambos contratiempos se solucionaron mediante AlterTable para cambiar el nombre de la columna y synchronize model para recuperar la fk.
  
  
- 
+-----------------------------------------------------
+
+💹 QUERIES
+
+1) Títulos de películas con su id de categoría y actores
+2) Actores que más películas han hecho
+3) Películas con más actores
+4) Actores que actúan en las películas con más actores:
+5) Las categorías más populares
+6) Actores más populares por categoría
+7) Ranking de los mejores musicales (según las tarifas de alquiler)
+8) Películas con behind the scenes
+9) Clasificación de películas según su tarifa de alquiler
+10) Películas de Grace Mostel que duran más de 2 horas.
+
+
