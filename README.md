@@ -15,7 +15,7 @@
 
 5) Cargar datos limpios en la nueva base de datos.
 
-6) Hacer 6 queries sobre la base de datos.
+6) Hacer 10 queries sobre la base de datos.
 
 ------------------------------------------
 
